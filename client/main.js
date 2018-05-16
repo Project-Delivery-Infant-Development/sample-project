@@ -14,3 +14,11 @@ Router.route('/', function(){
 Router.route('/admin', function(){
     this.render('admin')
   });
+
+  Template.viewlga.helpers({
+    tasks: [
+      { text: 'This is task 1' },
+      { text: 'This is task 2' },
+      { text: 'This is task 3' },
+    ],
+  });
