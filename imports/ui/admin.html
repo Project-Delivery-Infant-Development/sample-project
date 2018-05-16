@@ -40,14 +40,14 @@
                     <a href="#" data-toggle="collapse" data-target="#submenu-1"><i class="fa fa-fw fa-search"></i> SESSIONS <i class="fa fa-fw fa-angle-down pull-right"></i></a>
                     <ul id="submenu-1" class="collapse">
                         <li><a href="{{pathFor route='menu-1'}}"><i class="fa fa-angle-double-right"></i> VIEW SESSION </a></li>
-                        <li><a href="{{pathFor route='menu-2'}}"><i class="fa fa-angle-double-right"></i> ADD SESSION </a></li>
+                        <li><a href="{{pathFor route='menu-2'}}"><i class="fa fa-angle-double-right"></i> EDIT SESSION </a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#" data-toggle="collapse" data-target="#submenu-2"><i class="fa fa-fw fa-star"></i>  LGA <i class="fa fa-fw fa-angle-down pull-right"></i></a>
                     <ul id="submenu-2" class="collapse">
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i> VIEW LGA</a></li>
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i> ADD LGA</a></li>
+                        <li><a href="{{pathFor route='view-lga'}}"><i class="fa fa-angle-double-right"></i> VIEW LGA</a></li>
+                        <li><a href="{{pathFor route='add-lga'}}"><i class="fa fa-angle-double-right"></i> ADD LGA</a></li>
                     </ul>
                 </li>
                 <li>
@@ -78,12 +78,12 @@
                   <table class="table table-hover">
                     <thead>
                       <tr>
-                        <th scope="col">LGA ID</th>
-                        <th scope="col">NAME</th>
-                        <th scope="col">EMAIL</th>
-                        <th scope="col">ADDRESS</th>
-                        <th scope="col">SUBURB</th>
-                        <th scope="col">STATE</th>
+                        <th scope="col">SESSION NO</th>
+                        <th scope="col">SESSION DATE</th>
+                        <th scope="col">TIME</th>
+                        <th scope="col">INFANT GROUP</th>
+                        <th scope="col">LGA</th>
+                        <th scope="col">ROOM NO</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -132,4 +132,89 @@
         <!-- /.container-fluid -->
     </div>
 
+  </template>
+
+  <template name="view-lga">
+    {{>admin}}
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <!-- Page Heading -->
+            <div class="row" id="main" >
+                <div class="col-sm-9 col-md-9 well inner-margin" id="content">
+                  <h1>LGA List</h1>
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">LGA ID</th>
+                        <th scope="col">NAME</th>
+                        <th scope="col">EMAIL</th>
+                        <th scope="col">LOCATION</th>
+                        <th scope="col">HOME ADDRESS</th>
+                        <th scope="col">CONTACT</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+  </template>
+
+  <template name="add-lga">
+    {{>admin}}
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <!-- Page Heading -->
+            <div class="row" id="main" >
+                <div class="col-sm-9 col-md-9 well inner-margin" id="content">
+                  <div id="addlga">
+                    <body class="background">
+                    <title>Reflex Form</title>
+                    <div class="form-section">
+                    <h1>Add LGA</h1>
+                    <form name="myform" id="myform" action="" method="POST">
+                          <input type="text" name="name" placeholder="Fullname" id="name">
+                          <input type="email" name="email" placeholder="Email" id="email1">
+                          <input type="text" name="contact" placeholder="Contact" id="name">
+                          <input type="email" name="suburb" placeholder="Suburb" id="email1">
+                          <input type="email" name="city" placeholder="City" id="email1">
+                          <select class="country" id="country" name="country">
+                              <option value="">State</option>
+                              <option value="vic">Victoria</option>
+                              <option value="nsw">New South Wales</option>
+                              <option value="qn">Queensland</option>
+                          </select>
+                          <button class="btnSubmit" type="submit" name="submit" value="Submit">Send Invite</button>
+                          <button class="cancel" onclick="reset()" type="button" id="cancel">Cancel</button>
+                      </form>
+                      </div>
+                  </body>
+                  </div>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </div>
   </template>

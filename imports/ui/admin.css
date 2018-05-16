@@ -146,3 +146,12 @@
 .inner-margin{
   margin-left: 24rem;
 }
+
+#addlga .background{
+    background-color: #de4f7a;
+    background: -webkit-linear-gradient(left, #de4f7a , #93559b);
+    background: -o-linear-gradient(right, #de4f7a, #93559b);
+    background: -moz-linear-gradient(right, #de4f7a, #93559b);
+    background: linear-gradient(to right, #de4f7a , #93559b);
+  z-index:0;
+}
