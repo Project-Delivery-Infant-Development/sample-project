@@ -6,8 +6,8 @@ Router.route('/menu-2', function(){
     this.render('menu-2')
 });
 
-Router.route('/view-lga', function(){
-    this.render('view-lga')
+Router.route('/viewlga', function(){
+    this.render('viewlga')
 });
 
 Router.route('/add-lga', function(){
