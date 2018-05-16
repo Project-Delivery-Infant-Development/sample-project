@@ -10,6 +10,6 @@ Router.route('/viewlga', function(){
     this.render('viewlga')
 });
 
-Router.route('/add-lga', function(){
-    this.render('add-lga')
+Router.route('/addlga', function(){
+    this.render('addlga')
 });
