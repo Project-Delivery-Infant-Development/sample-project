@@ -22,3 +22,5 @@ insecure@1.0.7                # Allow all DB writes from clients (for prototypin
 iron:router
 twbs:bootstrap
 fortawesome:fontawesome
+aldeed:collection2@3.0.0
+aldeed:autoform

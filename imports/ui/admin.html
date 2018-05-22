@@ -1,5 +1,5 @@
 
-    <template name ="admin">
+    <template name="admin">
         <body>
   <div id="throbber" style="display:none; min-height:120px;"></div>
 <div id="noty-holder"></div>
@@ -14,14 +14,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://cijulenlinea.ucr.ac.cr/dev-users/">
-                <img  alt="LOGO">
+            <a class="navbar-brand" href="/">
+                <img src="images/IPAN-wordmark.jpg" alt="LOGO">
             </a>
         </div>
         <!-- Top Menu Items -->
         <ul class="nav navbar-right top-nav">
-            <li><a data-placement="bottom" data-toggle="tooltip" data-original-title="Stats"><i class="fa fa-bar-chart-o"></i>
-                </a>
+            <li><a href="{{pathFor route='admin'}}"><i class="fa fas fa-home"></i> HOME</a>
             </li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin User <b class="fa fa-angle-down"></b></a>
@@ -37,27 +36,23 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav side-nav">
                 <li>
-                    <a href="#" data-toggle="collapse" data-target="#submenu-1"><i class="fa fa-fw fa-search"></i> SESSIONS <i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                    <a href="#" data-toggle="collapse" data-target="#submenu-1"><i class="fa far fa-calendar"></i> SESSIONS <i class="fa fa-fw fa-angle-down pull-right"></i></a>
                     <ul id="submenu-1" class="collapse">
-                        <li><a href="{{pathFor route='menu-1'}}"><i class="fa fa-angle-double-right"></i> VIEW SESSION </a></li>
-                        <li><a href="{{pathFor route='menu-2'}}"><i class="fa fa-angle-double-right"></i> EDIT SESSION </a></li>
+                        <li><a href="{{pathFor route='menu-1'}}"><i class="fa fa-angle-double-right"></i> VIEW SESSIONS </a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#" data-toggle="collapse" data-target="#submenu-2"><i class="fa fa-fw fa-star"></i>  LGA <i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                    <a href="#" data-toggle="collapse" data-target="#submenu-2"><i class="fa far fa-address-card"></i>  LGA <i class="fa fa-fw fa-angle-down pull-right"></i></a>
                     <ul id="submenu-2" class="collapse">
                         <li><a href="{{pathFor route='viewlga'}}"><i class="fa fa-angle-double-right"></i> VIEW LGA</a></li>
                         <li><a href="{{pathFor route='add-lga'}}"><i class="fa fa-angle-double-right"></i> ADD LGA</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="investigaciones/favoritas"><i class="fa fa-fw fa-user-plus"></i>  MENU 3</a>
-                </li>
-                <li>
-                    <a href="sugerencias"><i class="fa fa-fw fa-paper-plane-o"></i> MENU 4</a>
-                </li>
-                <li>
-                    <a href="faq"><i class="fa fa-fw fa fa-question-circle"></i> MENU 5</a>
+                    <a href="#" data-toggle="collapse" data-target="#submenu-3"><i class="fa fas fa-address-card"></i> FACILITATOR <i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                    <ul id="submenu-3" class="collapse">
+                        <li><a href="{{pathFor route='menu-2'}}"><i class="fa fa-angle-double-right"></i> VIEW FACILITATOR </a></li>
+                    </ul>
                 </li>
             </ul>
         </div>
@@ -174,16 +169,7 @@
                       </tr>
                     </tbody>
                   </table>
-                  <h1>H!</h1>
-                  <div class="container">
-                    
-                    <ul>
-                    {{#each tasks}}
-                      {{> task}}
-                    {{/each}}
-                  </ul>
 
-                  </div>
 
                 </div>
             </div>
@@ -191,9 +177,6 @@
         </div>
         <!-- /.container-fluid -->
     </div>
-  </template>
-  <template name="task">
-    <li>{{text}}</li>
   </template>
 
 
