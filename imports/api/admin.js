@@ -13,3 +13,11 @@ Router.route('/viewlga', function(){
 Router.route('/add-lga', function(){
     this.render('add-lga')
 });
+
+Router.route('/enrolled-courses', function(){
+    this.render('enrolled-courses')
+});
+
+Router.route('/parent-search', function(){
+    this.render('parent-search')
+});
