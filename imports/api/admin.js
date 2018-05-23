@@ -17,11 +17,3 @@ Router.route('/viewlga', function(){
 Router.route('/addlga', function(){
     this.render('addlga')
 });
-
-Router.route('/enrolled-courses', function(){
-    this.render('enrolled-courses')
-});
-
-Router.route('/parent-search', function(){
-    this.render('parent-search')
-});

@@ -9,6 +9,7 @@ import '../imports/ui/faci.html';
 import '../imports/ui/admin.css';
 import '../imports/ui/parent.html';
 import '../imports/api/admin.js';
+import '../imports/api/parent/importables.js';
 
 
 
