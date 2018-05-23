@@ -1,0 +1,14 @@
+{
+  "name": "IPAN-new",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.0.0-beta.47",
+    "bcrypt": "^2.0.1",
+    "meteor-node-stubs": "^0.3.2",
+    "npm": "^6.0.1",
+    "simpl-schema": "^1.5.0"
+  }
+}

@@ -1,0 +1,13 @@
+<template name="start">
+  <body>
+    {{#if currentUser}}
+       {{> admin}}
+     {{else}} 
+    {{> atForm}}  
+  {{/if}}
+  <!-- <h1>Hello</h1>
+  <div><a href="{{pathFor route='admin'}}"><strong>ADMIN LOGIN</strong></a></div>
+  <div><a href="{{pathFor route='lga'}}"><strong>LGA LOGIN</strong></a></div>
+  <div><a href="{{pathFor route='faci'}}"><strong>Facilitator LOGIN</strong></a></div> -->
+</body>
+</template>
