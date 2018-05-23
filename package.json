@@ -6,6 +6,8 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0-beta.42",
+    "faker": "^4.1.0",
+    "lodash": "^4.17.10",
     "meteor-node-stubs": "^0.3.2",
     "npm": "^6.0.1",
     "simpl-schema": "^1.5.0"
