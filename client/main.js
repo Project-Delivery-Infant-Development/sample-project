@@ -6,9 +6,12 @@ import '../imports/ui/body.html';
 import '../imports/ui/admin.html';
 import '../imports/ui/lga.html';
 import '../imports/ui/faci.html';
-import '../imports/ui/parent.html';
 import '../imports/ui/admin.css';
+import '../imports/ui/parent.html';
 import '../imports/api/admin.js';
+
+
+
 
 Router.route('/', function(){
     this.render('start')
@@ -26,6 +29,10 @@ Router.route('/faci', function(){
           this.render('faci')
   });
 
-  Router.route('/parent',function(){
-        this.render('parent')
-  });
+  Router.route('/parent', function(){
+    this.render('parent')
+});
+
+  Router.route('/dbtrial', function(){
+            this.render('dbtrial')
+    });
