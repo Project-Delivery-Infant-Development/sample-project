@@ -1,4 +1,4 @@
-// Routing within the templates 
+// Routing within the templates
 
 
 
@@ -16,11 +16,6 @@ Router.route('/viewlga', function(){
 
 Router.route('/addlga', function(){
     this.render('addlga')
-});
-
-
-Router.route('/dbtrial', function(){
-    this.render('dbtrial')
 });
 
 Router.route('/viewfaci', function(){
@@ -46,6 +41,21 @@ Router.route('/enrolled-courses', function(){
 Router.route('/parent-search', function(){
     this.render('parent-search')
 });
+Router.route('/addcourse', function(){
+    this.render('addcourse')
+});
+
+Router.route('/viewcourse', function(){
+    this.render('viewcourse')
+});
+Router.route('/view-session', function(){
+    this.render('view-session')
+});
+
+Router.route('/parent-profile', function(){
+    this.render('parent-profile')
+});
+
 
 Router.route('/lgaviewsessions', function(){
     this.render('lgaviewsessions')

@@ -24,6 +24,7 @@
         <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Parent User <b class="fa fa-angle-down"></b></a>
             <ul class="dropdown-menu">
+                <li><a href="{{pathFor route='parent-profile'}}"><i class="fa fa-fw fa-user"></i> View Profile</a></li>
                 <li><a href="#"><i class="fa fa-fw fa-user"></i> Edit Profile</a></li>
                 <li><a href="#"><i class="fa fa-fw fa-cog"></i> Change Password</a></li>
                 <li class="divider"></li>
@@ -36,8 +37,15 @@
         <ul class="nav navbar-nav side-nav">
             <li>
                 <a href="{{pathFor route='enrolled-courses'}}" data-toggle="collapse" data-target="#submenu-1"><i class="fa far fa-calendar"></i> Enrolled Courses <i class="fa fa-fw fa-angle-right pull-right"></i></a>
-                
+
             </li>
+
+            <li>
+                    <a href="{{pathFor route='viewcourse'}}" data-toggle="collapse" data-target="#submenu-1"><i class="fa far fa-calendar"></i> View Courses <i class="fa fa-fw fa-angle-right pull-right"></i></a>
+
+                </li>
+
+
             <!-- <li>
                 <a href="#" data-toggle="collapse" data-target="#submenu-1"><i class="fa far fa-calendar"></i> GROUPS <i class="fa fa-fw fa-angle-down pull-right"></i></a>
                 <ul id="submenu-1" class="collapse">
@@ -49,10 +57,10 @@
             <li>
                 <a href="#" data-toggle="collapse" data-target="#submenu-3"><i class="fa fas fa-search"></i> Search <i class="fa fa-fw fa-angle-down pull-right"></i></a>
                 <ul id="submenu-3" class="collapse">
-                    <li><a href="{{pathFor route='parent-search'}}"><i class="fa fa-angle-double-right"></i> By LGA </a></li>
-                    <li><a href="{{pathFor route='parent-search'}}"><i class="fa fa-angle-double-right"></i> By Course </a></li>
-                    <li><a href="{{pathFor route='parent-search'}}"><i class="fa fa-angle-double-right"></i> By Session Time </a></li>
-                    <li><a href="{{pathFor route='parent-search'}}"><i class="fa fa-angle-double-right"></i> By Locationsss </a></li>
+                    <li><a href="{{pathFor route='parentsearch'}}"><i class="fa fa-angle-double-right"></i> By LGA </a></li>
+                    <li><a href="{{pathFor route='parentsearch'}}"><i class="fa fa-angle-double-right"></i> By Course </a></li>
+                    <li><a href="{{pathFor route='parentsearch'}}"><i class="fa fa-angle-double-right"></i> By Session Time </a></li>
+                    <li><a href="{{pathFor route='parentsearch'}}"><i class="fa fa-angle-double-right"></i> By Locationsss </a></li>
                 </ul>
             </li>
         </ul>
@@ -62,7 +70,7 @@
   </div>
   </body>
   </template>
-  
+
   <template name="enrolled-courses">
     {{>parent}}
 
@@ -74,6 +82,9 @@
                   <h1>Enrolled Courses</h1>
                   <div>You haven't enrolled in any courses</div>
                   <a href="{{pathFor route='parent-search'}}">Find a session now</a>
+                    <ul>
+
+                    </ul>
                 </div>
             </div>
         </div>
@@ -129,3 +140,162 @@
     </div>
 
   </template>
+  <template name="view-session">
+    {{>parent}}
+
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <!-- Page Heading -->
+            <div class="row" id="main" >
+                    <div class="col-sm-9 col-md-9 well inner-margin" id="content">
+                          Course 1 - Session
+                    <ul>
+
+                            {{#each tasks}}
+                              {{> task}}
+                            {{/each}}
+                          </ul>
+                          <div class="row">
+                            <div class="course-box">
+                                <div class="course-title">Session 1</div>
+                                <div class="location-box"><i class="fa fa-angle-right"></i> Melbourne, VIC</div>
+                                <div class="provider-name">Deakin</div>
+                                <div class="timetable">Sun: 5 am - 5 pm<br/>
+                                Mon: 5 am - 5 pm</div>
+                                <div class="session-link"><a href="#">Enrol in Sessions</a></div>
+                            </div>
+                            <div class="course-box">
+                                    <div class="course-title">Session 2</div>
+                                    <div class="location-box"><i class="fa fa-angle-right"></i> Melbourne, VIC</div>
+                                    <div class="provider-name">Deakin</div>
+                                    <div class="timetable">Sun: 5 am - 5 pm<br/>
+                                    Mon: 5 am - 5 pm</div>
+                                    <div class="session-link"><a href="#">Enrol in Sessions</a></div>
+                                </div>
+                        </div>
+                          </div>
+             </div>
+         </div>
+     </div>
+  </template>
+
+  <template name="viewcourse">
+        {{>parent}}
+
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <!-- Page Heading -->
+                <div class="row" id="main" >
+                        <div class="col-sm-9 col-md-9 well inner-margin" id="content">
+                             Courses
+                        <ul>
+
+                                {{#each tasks}}
+                                  {{> task}}
+                                {{/each}}
+                              </ul>
+                              <div class="row">
+                                <div class="course-box">
+                                    <div class="course-title">Session 1</div>
+                                    <div class="location-box"><i class="fa fa-angle-right"></i> Melbourne, VIC</div>
+                                    <div class="provider-name">Deakin</div>
+                                    <div class="session-link"><a href="{{pathFor route='view-session'}}">View Sessions</a></div>
+                                </div>
+                                <div class="course-box">
+                                        <div class="course-title">Course 2</div>
+                                        <div class="location-box"><i class="fa fa-angle-right"></i> Melbourne, VIC</div>
+                                        <div class="provider-name">Deakin</div>
+                                        <div class="session-link">View Sessions</div>
+                                    </div>
+                                    <div class="course-box">
+                                            <div class="course-title">Course 3</div>
+                                            <div class="location-box"><i class="fa fa-angle-right"></i> Melbourne, VIC</div>
+                                            <div class="provider-name">Deakin</div>
+                                            <div class="session-link">View Sessions</div>
+                                        </div>
+                                        <div class="course-box">
+                                                <div class="course-title">Course 3</div>
+                                                <div class="location-box"><i class="fa fa-angle-right"></i> Melbourne, VIC</div>
+                                                <div class="provider-name">Deakin</div>
+                                                <div class="session-link">View Sessions</div>
+                                            </div>
+                            </div>
+                              </div>
+                 </div>
+             </div>
+         </div>
+      </template>
+
+
+
+  <template name="task">
+        <li>{{text}}</li>
+      </template>
+
+  <template name="addcourse">
+    {{>parent}}
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <!-- Page Heading -->
+            <div class="row" id="main" >
+                <div class="col-sm-9 col-md-9 well inner-margin" id="content">
+                  <div id="addlga">
+                    <body class="background">
+                    <title>Reflex Form</title>
+                    <div class="form-section">
+                    <h1>Add Course</h1>
+                    <form name="myform" method="POST" id="myform" class="new-task">
+                          <input type="text" name="name" placeholder="Fullname" id="name">
+                          <!-- <input type="email" name="email" placeholder="Email" id="email1"> -->
+                          <!-- <input type="text" name="contact" placeholder="Contact" id="name">
+                          <input type="email" name="suburb" placeholder="Suburb" id="email1">
+                          <input type="email" name="city" placeholder="City" id="email1">
+                          <select class="country" id="country" name="country">
+                              <option value="">State</option>
+                              <option value="vic">Victoria</option>
+                              <option value="nsw">New South Wales</option>
+                              <option value="qn">Queensland</option>
+                          </select> -->
+                          <!-- <button class="btnSubmit" type="submit" name="submit" value="Submit">Send Invite</button>
+                          <button class="cancel" onclick="reset()" type="button" id="cancel">Cancel</button> -->
+                      </form>
+                      </div>
+                  </body>
+                  </div>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+  </template>
+
+  <template name="parent-profile">
+        {{>parent}}
+
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <!-- Page Heading -->
+                <div class="row" id="main" >
+                    <div class="col-sm-9 col-md-9 well inner-margin" id="content">
+                      <h1>Profile</h1>
+                      <div class="profile-field">
+                        <div><span class="label-field">Name: </span>
+                            <span class="fill-field">Bishal Shrestha</span> <small>edit {{> editableText collection="posts" field="body" wysiwyg=true}}</small>
+                        </div>
+                        <div><span class="label-field">Adddress: </span>
+                            <span class="fill-field">Sunshine, Victoria</span> <small>edit</small>
+                        </div>
+                        <div><span class="label-field">Email Address: </span>
+                            <span class="fill-field">test@gmail.com</span> <small>edit</small>
+                        </div>
+                        <div><span class="label-field">Phone Number: </span>
+                            <span class="fill-field">04123456789</span> <small>edit</small>
+                        </div>
+                    </div>
+
+                      </div>
+                </div>
+            </div>
+        </div>
+    </template>
