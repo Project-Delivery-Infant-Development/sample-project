@@ -1,68 +1,71 @@
-
-    <template name="admin">
+<template name="admin">
         <body>
-  <div id="throbber" style="display:none; min-height:120px;"></div>
-<div id="noty-holder"></div>
-<div id="wrapper">
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">
-                <img src="images/IPAN-wordmark.jpg" alt="LOGO">
-            </a>
-        </div>
-        <!-- Top Menu Items -->
-        <ul class="nav navbar-right top-nav">
-            <li><a href="{{pathFor route='admin'}}"><i class="fa fas fa-home"></i> HOME</a>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin User <b class="fa fa-angle-down"></b></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#"><i class="fa fa-fw fa-user"></i> Edit Profile</a></li>
-                    <li><a href="#"><i class="fa fa-fw fa-cog"></i> Change Password</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#"><i class="fa fa-fw fa-power-off"></i> Logout</a></li>
-                </ul>
-            </li>
-        </ul>
-        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav side-nav">
-                <li>
-                    <a href="#" data-toggle="collapse" data-target="#submenu-1"><i class="fa far fa-calendar"></i> SESSIONS <i class="fa fa-fw fa-angle-down pull-right"></i></a>
-                    <ul id="submenu-1" class="collapse">
-                        <li><a href="{{pathFor route='menu-1'}}"><i class="fa fa-angle-double-right"></i> VIEW SESSIONS </a></li>
+          <div id="throbber" style="display:none; min-height:120px;"></div>
+          <div id="noty-holder"></div>
+          <div id="wrapper">
+            <!-- Navigation -->
+              <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                  <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand" href="/">
+                          <img src="images/IPAN-wordmark.jpg" alt="LOGO">
+                      </a>
+                  </div>
+                  <!-- Top Menu Items -->
+                    <ul class="nav navbar-right top-nav">
+                        <li><a href="{{pathFor route='admin'}}"><i class="fa fas fa-home"></i> HOME</a>
+                        </li>
+                        <li>{{> loginButtons}}</li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin User <b class="fa fa-angle-down"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#"><i class="fa fa-fw fa-user"></i> Edit Profile</a></li>
+                                <li><a href="#"><i class="fa fa-fw fa-cog"></i> Change Password</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#"><i class="fa fa-fw fa-power-off"></i> Logout</a></li>
+                            </ul>
+                        </li>
                     </ul>
-                </li>
-                <li>
-                    <a href="#" data-toggle="collapse" data-target="#submenu-2"><i class="fa far fa-address-card"></i>  LGA <i class="fa fa-fw fa-angle-down pull-right"></i></a>
-                    <ul id="submenu-2" class="collapse">
-                        <li><a href="{{pathFor route='viewlga'}}"><i class="fa fa-angle-double-right"></i> VIEW LGA</a></li>
-                        <li><a href="{{pathFor route='addlga'}}"><i class="fa fa-angle-double-right"></i> ADD LGA</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#" data-toggle="collapse" data-target="#submenu-3"><i class="fa fas fa-address-card"></i> FACILITATOR <i class="fa fa-fw fa-angle-down pull-right"></i></a>
-                    <ul id="submenu-3" class="collapse">
-                        <li><a href="{{pathFor route='menu-2'}}"><i class="fa fa-angle-double-right"></i> VIEW FACILITATOR </a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </nav>
-    </div>
-    </body>
-    </template>
+                <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav side-nav">
+                        <li>
+                            <a href="#" data-toggle="collapse" data-target="#submenu-1"><i class="fa far fa-calendar"></i> SESSIONS <i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                            <ul id="submenu-1" class="collapse">
 
-    <template name="menu-1">
+                                <li><a href="{{pathFor route='viewsessions'}}"><i class="fa fa-angle-double-right"></i> VIEW SESSIONS </a></li>
+                                <li><a href="{{pathFor route='editsessions'}}"><i class="fa fa-angle-double-right"></i> EDIT SESSIONS </a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="collapse" data-target="#submenu-2"><i class="fa far fa-address-card"></i>  LGA <i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                            <ul id="submenu-2" class="collapse">
+                                <li><a href="{{pathFor route='viewlga'}}"><i class="fa fa-angle-double-right"></i> VIEW LGA</a></li>
+                                <li><a href="{{pathFor route='addlga'}}"><i class="fa fa-angle-double-right"></i> ADD LGA</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="collapse" data-target="#submenu-3"><i class="fa fas fa-address-card"></i> FACILITATOR <i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                            <ul id="submenu-3" class="collapse">
+                                <li><a href="{{pathFor route='viewfaci'}}"><i class="fa fa-angle-double-right"></i> VIEW FACILITATOR </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            <!-- /.navbar-collapse -->
+            </nav>
+        </div>
+      </body>
+</template>
+
+<!-- View Sessions Template-->
+    <template name="viewsessions">
       {{>admin}}
     <div id="page-wrapper">
         <div class="container-fluid">
@@ -108,10 +111,10 @@
         <!-- /.container-fluid -->
     </div>
     <!-- /#page-wrapper -->
-<!-- /#wrapper -->
-
 </template>
-  <template name="menu-2">
+
+<!-- Edit Sessions Template-->
+  <template name="editsessions">
     {{>admin}}
 
     <div id="page-wrapper">
@@ -119,7 +122,7 @@
             <!-- Page Heading -->
             <div class="row" id="main" >
                 <div class="col-sm-9 col-md-9 well inner-margin" id="content">
-                    <h1>Page has changes, Congrats!!</h1>
+                    <h1>EDIT SESSIONS</h1>
                 </div>
             </div>
             <!-- /.row -->
@@ -129,6 +132,8 @@
 
   </template>
 
+
+  <!-- View Lga Template -->
   <template name="viewlga">
     {{>admin}}
     <div id="page-wrapper">
@@ -180,6 +185,7 @@
   </template>
 
 
+  <!-- Add LGA template -->
 
   <template name="addlga">
     {{>admin}}
@@ -189,8 +195,22 @@
             <div class="row" id="main" >
                 <div class="col-sm-9 col-md-9 well inner-margin" id="content">
                   <div id="addlga">
-                    
-
+                    <div class="container">
+                      <!-- Create an autoform using the schema -->
+                      <h2>ADD LGA</h2>
+                      {{#autoForm id="afUpdateDemo" type=formType collection=Collections.People doc=selectedPersonDoc autosave=autoSaveMode}}
+                        {{> afQuickField name="firstName"}}
+                        {{> afQuickField name="lastName"}}
+                        {{> afQuickField name="email"}}
+                        {{> afQuickField name="zip"}}
+                        {{#unless autoSaveMode}}
+                        <div class="form-group">
+                          <button type="submit" class="btn btn-primary" disabled="{{disableButtons}}">Submit</button>
+                          <button type="reset" class="btn btn-default" disabled="{{disableButtons}}">Reset Form</button>
+                        </div>
+                        {{/unless}}
+                      {{/autoForm}}
+                  </div>
                 </div>
             </div>
             <!-- /.row -->
@@ -198,4 +218,55 @@
         <!-- /.container-fluid -->
     </div>
   </div>
+  </template>
+
+  <!-- View FACILITATOR Template -->
+  <template name="viewfaci">
+    {{>admin}}
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <!-- Page Heading -->
+            <div class="row" id="main" >
+                <div class="col-sm-9 col-md-9 well inner-margin" id="content">
+                  <h1>FACILITATOR LIST</h1>
+
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">LGA ID</th>
+                        <th scope="col">NAME</th>
+                        <th scope="col">EMAIL</th>
+                        <th scope="col">LOCATION</th>
+                        <th scope="col">HOME ADDRESS</th>
+                        <th scope="col">CONTACT</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </div>
   </template>

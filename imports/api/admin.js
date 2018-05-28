@@ -1,13 +1,13 @@
+// Routing within the templates 
 
 
 
-
-Router.route('/menu-1', function(){
-    this.render('menu-1')
+Router.route('/viewsessions', function(){
+    this.render('viewsessions')
 });
 
-Router.route('/menu-2', function(){
-    this.render('menu-2')
+Router.route('/editsessions', function(){
+    this.render('editsessions')
 });
 
 Router.route('/viewlga', function(){
@@ -17,6 +17,60 @@ Router.route('/viewlga', function(){
 Router.route('/addlga', function(){
     this.render('addlga')
 });
+
+
+Router.route('/dbtrial', function(){
+    this.render('dbtrial')
+});
+
+Router.route('/viewfaci', function(){
+    this.render('viewfaci')
+});
+
+Router.route('/faciviewsessions', function(){
+    this.render('faciviewsessions')
+});
+
+Router.route('/faciviewgroups', function(){
+    this.render('faciviewgroups')
+});
+
+Router.route('/facigroupattend', function(){
+    this.render('facigroupattend')
+});
+
+Router.route('/enrolled-courses', function(){
+    this.render('enrolled-courses')
+});
+
+Router.route('/parent-search', function(){
+    this.render('parent-search')
+});
+
+Router.route('/lgaviewsessions', function(){
+    this.render('lgaviewsessions')
+});
+
+Router.route('/lgaeditsessions', function(){
+    this.render('lgaeditsessions')
+});
+
+Router.route('/lgaaddsessions', function(){
+    this.render('lgaaddsessions')
+});
+
+Router.route('/lgaviewgroups', function(){
+    this.render('lgaviewgroups')
+});
+
+Router.route('/lgaeditgroups', function(){
+    this.render('lgaeditsessions')
+});
+
+Router.route('/lgaaddgroups', function(){
+    this.render('lgaaddsessions')
+});
+
 
 AccountsTemplates.addField({
     _id: 'phone',
@@ -59,63 +113,4 @@ AccountsTemplates.addField({
         value: "Parent",
       },
     ],
-});
-
-
-
-
-
-
-AccountsTemplates.configure({
-    // Behavior
-    confirmPassword: true,
-    enablePasswordChange: true,
-    forbidClientAccountCreation: false,
-    overrideLoginErrors: false,
-    sendVerificationEmail: false,
-    lowercaseUsername: false,
-    focusFirstInput: true,
-
-    // Appearance
-    showAddRemoveServices: false,
-    showForgotPasswordLink: true,
-    showLabels: true,
-    showPlaceholders: true,
-    showResendVerificationEmailLink: false,
-
-    // Client-side Validation
-    continuousValidation: false,
-    negativeFeedback: false,
-    negativeValidation: true,
-    positiveValidation: true,
-    positiveFeedback: true,
-    showValidating: true,
-
-    // Privacy Policy and Terms of Use
-    privacyUrl: 'privacy',
-    termsUrl: 'terms-of-use',
-
-    // Redirects
-    homeRoutePath: '/start',
-    redirectTimeout: 4000,
-
-    // Hooks
-    // onLogoutHook: myLogoutFunc,
-    // onSubmitHook: mySubmitFunc,
-    // preSignUpHook: myPreSubmitFunc,
-    // postSignUpHook: myPostSubmitFunc,
-
-    // Texts
-    texts: {
-      button: {
-          signUp: "Register Now!"
-      },
-      socialSignUp: "Register",
-      socialIcons: {
-          "meteor-developer": "fa fa-rocket"
-      },
-      title: {
-          forgotPwd: "Recover Your Password"
-      },
-    },
 });

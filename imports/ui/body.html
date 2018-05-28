@@ -2,8 +2,15 @@
   <body>
     {{#if currentUser}}
     {{> admin}}
-    {{else}} 
-  {{> atForm}}  
- {{/if}}  
+    {{else}}
+  {{> atForm}}
+ {{/if}}
+ <div>
+   <h4>This is only for navigation</h4>
+   <p><a href="{{pathFor route='parent'}}"><i class="fa fa-angle-double-right"></i> Parent Page </a></p>
+   <p><a href="{{pathFor route='admin'}}"><i class="fa fa-angle-double-right"></i> Admin Page </a></p>
+   <p><a href="{{pathFor route='faci'}}"><i class="fa fa-angle-double-right"></i> Facilitator Page </a></p>
+   <p><a href="{{pathFor route='lga'}}"><i class="fa fa-angle-double-right"></i> LGA Page </a></p>
+ </div>
 </body>
 </template>

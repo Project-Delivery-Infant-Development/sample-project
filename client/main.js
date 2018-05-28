@@ -9,9 +9,7 @@ import '../imports/ui/faci.html';
 import '../imports/ui/admin.css';
 import '../imports/ui/parent.html';
 import '../imports/api/admin.js';
-import '../imports/api/parent/importables.js';
-
-
+import '../imports/api/addlgas.js';
 
 
 Router.route('/', function(){
@@ -27,13 +25,9 @@ Router.route('/lga', function(){
   });
 
 Router.route('/faci', function(){
-          this.render('faci')
+      this.render('faci')
   });
 
   Router.route('/parent', function(){
     this.render('parent')
 });
-
-  Router.route('/dbtrial', function(){
-            this.render('dbtrial')
-    });
