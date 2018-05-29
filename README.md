@@ -76,7 +76,7 @@ This package is used to apply Font Awesome Markup in the project.
 Add package by typing ```$ meteor add aldeed:collection2-core
 $ meteor npm install --save simpl-schema```
 More details at https://atmospherejs.com/aldeed/collection2-core
-This package is used to allows you to attach a schema to a Mongo.Collection. Automatically validates against that schema when inserting and updating from client or server code.
+This package allows you to attach a schema to a Mongo.Collection. Automatically validates against that schema when inserting and updating from client or server code.
 
 5. **aldeed:autoform**
 Add package by typing ```$ meteor add aldeed:autoform```
